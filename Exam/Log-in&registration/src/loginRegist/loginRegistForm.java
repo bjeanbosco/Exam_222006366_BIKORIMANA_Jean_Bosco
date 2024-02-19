@@ -77,7 +77,9 @@ public class loginRegistForm extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 0));
 
-        jPanel2.setBackground(new java.awt.Color(0, 204, 153));
+        jPanel2.setBackground(new java.awt.Color(51, 255, 51));
+
+        jPanel3.setBackground(new java.awt.Color(102, 255, 51));
 
         jLabel3.setBackground(new java.awt.Color(204, 0, 204));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -426,7 +428,7 @@ public class loginRegistForm extends javax.swing.JFrame {
           try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/registrationform","root","");
-            PreparedStatement pst = connect.prepareStatement("select * from student where reg_number =? and jpassword = ? ");
+            PreparedStatement pst = connect.prepareStatement("select * from student where firstname =? and reg_number =? ");
             
              pst.setString(1,jTextField_Username.getText() );
              pst.setString(2,jPasswordField.getText() );
